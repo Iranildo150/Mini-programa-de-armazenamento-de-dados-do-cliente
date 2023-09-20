@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class hello {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o Ano do modelo:");
+        int anoCompra = scanner.nextInt();
+        scanner.nextLine();
+
+        boolean estaNoIntervalo = (anoCompra >= 2010 && anoCompra <= 2023);
+
+        if (estaNoIntervalo) {
+            System.out.println("Seu carro poderá assinar o nosso seguro!.");
+            System.out.println("Digite o Modelo do veículo:");
+              String nomeVeiculo = scanner.nextLine();
+              System.out.println("Digite a cor do veículo:");
+                String corVeiculo = scanner.nextLine();
+                System.out.println("Seu veículo possui quantas portas?: ");
+                  int portaVeiculo = scanner.nextInt();
+                   scanner.nextLine();
+                   System.out.println("Por favor, digite seu CPF (apenas números):");
+                     String cpf = scanner.nextLine();
+                      if (cpf.length() == 11) {
+                System.out.println("CPF digitado: " + cpf);
+            } else {
+                System.out.println("CPF inválido. Por favor, digite 11 números.");
+            }
+                      System.out.println("Por favor, digite seu número de celular (apenas números):");
+                      String numeroCelular = scanner.nextLine();
+                      if (numeroCelular.length() == 11) {
+                          System.out.println("Numero digitado: " + numeroCelular);
+                      } else {
+                          System.out.println("Numero inválido. Por favor, digite 11 números.");
+                      }
+                      System.out.println("Obrigado por nos escolher, Em breve 1 do nosso especialista entrará em contato com você!");
+        } else {
+            System.out.println("Obrigado por usar o nosso programa. Mas seu carro não se enquadra nas diretrizes do nosso seguro! :(.");
+        }
+
+        scanner.close();
+    }
+}
